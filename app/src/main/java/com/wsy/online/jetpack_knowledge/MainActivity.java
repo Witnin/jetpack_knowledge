@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -43,7 +45,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
         navController = NavHostFragment.findNavController(fragment);
-        NavGraphBuilder.build(navController);
+        Fragment hostFragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_main);
+        NavGraphBuilder.build(this,hostFragment.getChildFragmentManager(),navController,fragment.getId());
 
         navView.setOnNavigationItemSelectedListener(this);
 

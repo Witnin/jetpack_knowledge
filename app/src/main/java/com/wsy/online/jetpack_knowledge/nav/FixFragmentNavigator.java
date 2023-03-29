@@ -24,7 +24,7 @@ import java.util.Map;
  * 定制的Fragment导航器，替换ft.replace(mContainerId, frag);为 hide()/show()
  */
 @Navigator.Name("fixfragment")
-public class FixFragmentNavigator extends FragmentNavigator {
+public class FixFragmentNavigator extends FragmentNavigator{
     private static final String TAG = "FixFragmentNavigator";
     private Context mContext;
     private FragmentManager mManager;
@@ -124,7 +124,7 @@ public class FixFragmentNavigator extends FragmentNavigator {
             isAdded = true;
         }
 //        if (navigatorExtras instanceof Extras) {
-//            Extras extras = (Extras) navigatorExtras;
+//            Extras extras =  (Extras)navigatorExtras;
 //            for (Map.Entry<View, String> sharedElement : extras.getSharedElements().entrySet()) {
 //                ft.addSharedElement(sharedElement.getKey(), sharedElement.getValue());
 //            }
