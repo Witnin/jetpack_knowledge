@@ -52,4 +52,5 @@ dependencies {
 
     api project(':wsy_annotation')
     kapt project(':wsy_complier')
+    implementation 'com.alibaba:fastjson:1.2.62'
 }
