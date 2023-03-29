@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "jetpack_knowledge"
 include ':app'
+include ':wsy_annotation'
+include ':wsy_complier'

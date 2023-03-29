@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.wsy.online.annotation.FragmentDestination
 import com.wsy.online.jetpack_knowledge.databinding.FragmentDashboardBinding
 
+@FragmentDestination(pageUrl = "main/tabs/dash")
 class DashboardFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
